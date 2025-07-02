@@ -32,6 +32,6 @@ jobs:
       - name: Build Docker image for amd64 and arm64
         run: |
           docker buildx build --platform linux/amd64,linux/arm64 \
-            -t ptag/meteormail:latest \
-            -t ptag/meteormail:${{ steps.timestamp.outputs.tag }} \
+            -t pptag/meteormail:latest \
+            -t pptag/meteormail:${{ steps.timestamp.outputs.tag }} \
             . --push
